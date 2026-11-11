@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Js</title>
+</head>
+<body id="myBody">
+    
+    <!-- Inline Script -->
+    <button onclick="alert('This is an fucking Inline Script,motherfucker');">Click Me motherfucker</button>
+
+    <script>
+        function showNumber() {
+            alert("343") ;
+        }
+    </script>
+    
+    <button onclick="showMassege();">TestJs</button>
+    <button tpye="button" onclick="showNumber()">Numbers?</button>
+    <!-- Internal Script -->
+    <!-- <script>
+        function showMassege() {
+            alert("This is an internal Script") ;
+        }
+    </script> -->
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+
+    <p id="demo">This is a paragraph</p>
+    <button tpye="button" onclick="myFunction();">Change Content</button>
+    <button type="button">Number?</button>
+
+    <script>
+        // Single comment
+        /*
+            This is 
+            multi-line 
+            comments
+        */
+        // Document.write
+        document.write("Hello Js")
+
+        // window.alert
+        // alert("Have you been bit?")
+        
+        // // innerHTMl
+        // function myFunction() {
+        //     document.getElementById("demo").innerHTML= "Hello,world" ;
+        // }
+    
+        // console.log
+        console.log("Hello from console");
+        console.log(document.getElementById("demo"))
+
+    </script>
+
+    <!-- ประกาศตรงๆ -->
+    <!-- <script>
+        x = 5;
+        y = 10;
+        z = x + y;
+        console.log(z)
+    </script> -->
+
+    <!-- ใช้ var -->
+    <script>
+        
+        const name = "Omar Little" ;
+        // name = "Jimmy Mcnulty";
+        console.log(name);
+
+        var x = 12 ;
+        // var x = 45;
+        var y = 23 ;
+        var z = x + y;
+        console.log(z) ;
+    </script>
+
+    <!-- ใช้ let -->
+    <script>
+        let a = 78;
+        let b = 63;
+        let c = a + b;
+        console.log(c);
+
+        const d = 12;
+        const e = 28;
+        const f = d * e;
+        console.log(f);
+    </script>
+
+    <script>
+        {
+            var x2 = 7;
+            let y2 = 4;
+            const z_2 = 6;
+        }
+        console.log(x2);
+        console.log(y2);
+        console.log(z2);
+    </script>
+
+    <script>
+        let x3 = 4;
+        let y3 = 2;
+        let z3 = x3**y3;
+        let a3 = x3 % y3;
+        let b3 = x3 ++ ;
+
+        console.log(z3);
+        console.log(a3);
+        console.log(b3);
+    </script>
+
+    <script>
+        // Numbers เก็บตัวเลข
+        let length = 200 ;
+        let weight = 15 ;
+
+        // Strings เก็บข้อความ
+        let car = "Nissan" ;
+        let Name = "John Marston" ;
+
+        // Booleans ค่าจริงกับเท็จ
+        let isTrue = true ;
+        let isFalse = false ;
+
+        // Objects เก็บข้อมูลค่าหนึ่งที่มีข้อมูลย่อยหลายค่า
+        const person = {
+            FirstName: "Arthur",
+            LastName: "Morgan"
+        };
+
+        //Array ตัวแปรเดียวเก็บค่าได้หลายค่า
+        const cars = ["Honda","Toyota","Nissan"];
+
+        // Undefined ตัวแปรที่ไม่มีค่า (หากสร้างเฉพาะตัวแปรแล้วลองเช็คค่าด้วย connsole จะขึ้น undefined)
+        let X ;
+        let Y = "Dutch Van De Linde";
+        console.log(typeof X)
+        console.log(typeof Y)
+
+        // BigInt ประเภทเก็บตัวเลขที่เยอะมากๆ มีทศนิยมไม่ได้ ใช้คำนวณทางคณิตไม่ได้
+        let bigint = BigInt("2551525825222500058465484568598565985683633300") ;
+        console.log(bigint)
+
+        // Symbol เก็บค่าที่ Unique(ค่าเฉพาะเพียงตัวเดียว)
+        const symb1 = Symbol("Symbol1");
+        const symb2 = Symbol("Symbol2");
+        console.log(symb1 != symb2)
+
+        // Null ค่าที่ไม่รู้จัก , ไม่มีอยู่จริง
+        let Age = null; // ไม่แสดงค่า
+        console.log(Age)
+
+    </script>
+
+    <script>
+        function myFunction2(num1,num2) {
+            return num1 * num2 ;
+        }
+
+        let Mee = myFunction2(120,64);
+        console.log(Mee)
+
+        console.log(myFunction2(45,67));
+
+        function myMath(n1,n2) {
+            let name3 = "Dutch Van De Linde";
+            console.log("Inside Function",name3) ;
+            return n1 * n2 ;
+        }
+
+        console.log(myMath(56,130));
+        // console.log(name3)
+
+        // console.log("Inside Function",name3) ;
+        function TheTimes(n1,n2,n3) {
+            let times = "This is Times" ;
+            console.log("The hell!!?",times) ;
+            return (n1**2)*(n2+18)*n3 ;
+        }
+        Sinny = TheTimes(21,36,7);
+        console.log(Sinny)
+
+    </script>
+
+    <script>
+        // How to Objects
+
+        // 1)Object Literal
+        const caR = {
+            make: "Mercedes" ,
+            model: "A-Class",
+            year: 2024,
+            // Method
+            displayInfo: function() {
+                console.log(`${this.make} , ${this.model} , Year : ${this.year}`);
+            }
+        } ;
+        console.log(caR.make);
+        console.log(caR.model);
+        caR.displayInfo();
+
+        const Fruit = {
+            red: "Apple",
+            orange: "Orange",
+            blue: "Blueburry",
+            Green: "Watermelon",
+            How_many: 9,
+            showfruits() {
+                console.log(`${this.red} , ${this.orange} , ${this.blue} , ${this.Green} , All Fruit is : ${this.How_many}`)
+            }
+        } ;
+
+        console.log(Fruit.red);
+        console.log(Fruit.orange);
+        console.log(Fruit.blue);
+        console.log(Fruit.Green);
+        Fruit.showfruits();
+
+        
+        // 2.New keywords
+        const date = new Date();
+        console.log(date);
+        
+        function Car(make,model,year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.displayInfo = function() {
+                console.log(`${this.make} , ${this.model} , Year : ${this.year}`);
+            }
+        }
+
+        const Car1 = new Car("Mercedes-Benz", "S-Class", 2026);
+        const Car2 = new Car("BMW" , "3 Series", 2026);
+        console.log(Car1);
+        console.log(Car2);
+        console.log(Car1.make);
+        console.log(Car2.year);
+        Car1.displayInfo();
+        Car2.displayInfo();
+
+        function Games(game_name,story,graphics,game_play,price) {
+            this.game_name = game_name;
+            this.story = story;
+            this.graphics = graphics;
+            this.game_play = game_play;
+            this.price = price;
+            this.TheGame = function() {
+                console.log(`${this.game_name}, ${this.story}, ${this.graphics}, ${this.game_play},Price : ${this.price}`);
+            }
+        }
+
+        const game1 = new Games("Red Dead Redemption2", "Greatest", "High", "Slow_life", 1599);
+        const game2 = new Games("God of War", "Great", "Mid", "SoMuchFun", 1290);
+        const game3 = new Games("Dead By Daylight", "VeryGood", "Mid", "DogGame", 359);
+        const game4 = new Games("Elden Ring", "Deeps", "Good", "Peak", 1790);
+        const game5 = new Games("Sekiro: Shadows die twice", "Good", "Good", "Absolute_Peak", 2000);
+        const game6 = new Games("Hollow Knight", "Deep", "Good", "Fun", 319);
+        const game7 = new Games("Ghost of Tsushima", "Peak", "Good", "Peak", 1799);
+        
+        console.log(game1);
+        console.log(game2);
+        console.log(game3);
+        console.log(game1.story);
+        console.log(game2.game_play);
+        console.log(game3.game_play);
+        console.log(game4);
+        console.log(game4.game_play);
+        console.log(game5);
+        console.log(game5.game_play);
+
+    </script>
+
+    <button id="fackOff" onclick="alert('What is heppening to my goddamn computer,motherfucker!!?')">FackOff</button>
+
+    <p id="myText">Change this text</p>
+    <button id="myBtn">Click to change</button>
+
+    <button id="changeColorBtn">Change Color</button>
+
+    <script>
+        const button = document.getElementById("myBtn");
+        button.addEventListener("click", function() {
+            const theText = document.getElementById("myText");
+            theText.textContent = "Text content has been change." ;
+        })
+        const theButton = document.getElementById("myBtn");
+        theButton.addEventListener("dblclick", function(){
+            const GGbutton = document.getElementById("myText");
+            GGbutton.textContent = "click to change the text." ;
+        })
+
+        const cButton = document.getElementById("myBtn");
+        cButton.addEventListener("mouseover", function(){
+            const changeButton = document.getElementById("myBtn");
+            changeButton.style.backgroundColor = "red";
+        })
+        const bButton =  document.getElementById("myBtn");
+        bButton.addEventListener("mouseout", function(){
+            const BColor = document.getElementById("myBtn");
+            BColor.style.backgroundColor = "white";
+        })
+
+        const changeColor = document.getElementById("changeColorBtn");
+        changeColor.addEventListener("mouseenter", function(){
+            const CColor = document.getElementById("myBody");
+            CColor.style.backgroundColor = "yellow" ;
+        })
+
+        const backColor = document.getElementById("changeColorBtn");
+        backColor.addEventListener("mouseleave", function(){
+            const beBackColor = document.getElementById("myBody");
+            beBackColor.style.backgroundColor = "white" ;
+        })
+    </script>
+
+    <script>
+        let textstring = "this is a string" ;
+        let FirstNameString = "Kendall" ;
+        let LastNameString = "Roy" ;
+        //let greetString = FirstNameString + " " + LastNameString ;
+        
+        // This is Template String / Template Literal ---> : ใช้ข้อความร่วมกับตัวแปรได้
+        let greetString = `Hey, I am ${FirstNameString} ${LastNameString}` ;
+        console.log(greetString) ;
+        console.log(greetString.lenght);
+
+        let price = 1799 ;
+        let VAT = 0.05 ;
+        let totalPrice = `Total Price : ${(price * (1+VAT)).toFixed(2)}` ;
+        console.log(totalPrice) ;
+
+        let price1 = 1599 ;
+        let VAT1 = 0.60 ;
+        let totalPrice2 = `Total Price of Red Dead Redemption is : ${(price1-(price1*VAT1)).toFixed(2)} Baht` ;
+        console.log(totalPrice2) ;
+        
+        //Numbers
+        let number1 = 200 ; let number3 = "300" ;
+        let number2 = 50 ; let number4 = "JS" ;
+        let sum = number1 + number2 ;
+        let sum2 = number3 / number4 ;
+        console.log(sum2);
+        console.log(sum) ;
+
+    </script>
+
+    <script>
+        // Arrays
+        const exArrays = []; //สร้าง Arrays เปล่า
+        const langs = ["HTML","CSS","JS","Python"]; // เริ่มนับจาก 0 || การเขียนแบบนี้เรียกว่า Array literal
+        console.log(langs[0] = 100);
+        console.log(langs.lenght);
+        // .push() ใช้เพิ่ม Array ต่อตัวท้าย
+        // .pop() ใช้ลบ Array ตัวท้าย
+        // .shift() ใช้ลบ Array ตัวแรก
+        // .unshift() ใช้เพิ่ม Array ต่อตัวหน้า
+        console.log(langs.unshift("C++")); 
+        console.log(langs);
+        
+        const ggGame = new Array("Sekiro","Elden Ring","God of war"); // New Keyword
+        console.log(ggGame);
+        console.log(ggGame[2]);
+
+        const concatArrays = langs.concat(ggGame);
+        console.log(concatArrays);
+
+        // forEach() 
+        const nums = [1,2,3];
+        nums.forEach(function(nums) {
+            console.log(`This is forEach() : ${nums}`);
+        })
+
+        //map()
+        const nums2 = [1,2,3,4,5,6];
+        const doubled = nums2.map(function(nums2) {
+            return nums2 * 15 ;
+        })
+        console.log(`This is map() : ${doubled}`) ;
+        console.log(doubled);
+
+        // filter()
+        const nums3 = [1,2,3,4,5,6,7,8,9,10];
+        const events = nums3.filter(function(nums3) {
+            return nums3 % 2 == 0 ;
+        })
+        console.log(`This is filter() : ${events}`) ;
+
+        // reduce()
+        const nums4 = [1,2,3,4];
+        const sum_reduce = nums4.reduce(function(total,nums4) {
+            console.log(`${total} x ${nums4}`);
+            return total * nums4 ;
+            // 1 + 2 = 3
+            // 3 + 3 = 6
+            // 6 + 4 = 10
+        }, 1); // set ค่าเริ่มต้นที่ 1 ;
+        console.log(`This is reduce() : ${sum_reduce}`) ;
+
+        // some()
+        const nums5 = [1,2,3,4,5,6,7,8,9,10];
+        const hasEven = nums5.some(function(nums5) {
+            return nums5 % 13 == 0 ;
+        })
+        console.log(`This is some() : ${hasEven}`) ;
+
+        // every()
+        const nums6 = [-5,1,2,3,4,5,6,7,8,9,10];
+        const allPositive = nums6.every(function(nums6) {
+            return nums6 > 0 ;
+        })
+        console.log(`This is every() : ${allPositive}`);
+
+        // find()
+        const nums7 = [-5,1,3,4,5,6,7,8,9,10];
+        const firstEven = nums7.find(function(nums6) {
+            return nums6 % 2 == 0 ;
+        })
+        console.log(`This is find() : ${firstEven}`) ;
+
+        // findIndex()
+        const nums8 = [1,2,3,4,5,6,7,8,9,10];
+        const firstIndex = nums8.findIndex(function(nums8) {
+            return nums8 % 4 == 0 ;
+        })
+        console.log(`This is findIndex() : ${firstIndex}`);
+    </script>
+
+    <script>
+        // if   else    else if
+        let theAge = 17 ;
+        if (theAge >= 18) {
+            console.log("You are an adult.") ;
+        } else {
+            console.log("You are not an adult.")
+        }
+
+        let theScore = 35 ;
+        if (theScore >= 90 && theScore <=100) {
+            console.log("Grade : A");
+        } else if (theScore >= 80) {
+            console.log("Grade : B");
+        } else if (theScore >= 70) {
+            console.log("Grade : C");
+        } else if (theScore >= 60) {
+            console.log("Grade : D");
+        } else if (theScore < 60 && theScore > 0) {
+            console.log("Grade : F");
+        } else {
+            console.log("Input ERROR.");
+        }
+
+        // Ternary Operator ---> เช็ค if  else แบบบรรทัดเดียว
+        let theAge2 = 19 ;
+        let message = (theAge2 >= 18) ? "You are an adult" : "You are not an adult" ;
+        console.log(`This is test ternary ---> : ${message}`);
+
+        let thisDay = "Wednesday" ;
+        let toDay = (thisDay == "Sunday") ? `Today is ${thisDay}` : `Today is not ${thisDay}` ;
+        console.log(toDay) ;
+
+        // Switch
+        let Day = 1 ;
+        let dayName;
+        switch(Day) {
+            case 1:
+                dayName = "Sunday";
+                break;
+            case 2:
+                dayName = "Monday";
+                break;
+            case 3:
+                dayName = "Tuesday";
+                break;
+            case 4:
+                dayName = "Wedensday";
+                break;
+            case 5:
+                dayName = "Thursday";
+                break;
+            case 6:
+                dayName = "Friday";
+                break;
+            case 7:
+                dayName = "Saturday";
+                break;
+            default:
+                dayName = "Invalid Day";
+        }
+        console.log(`Today is ${dayName}`);
+
+    </script>
+
+    <script>
+        // for loop  and  while loop
+        let theFruit = ["Apple","Banana","Orange","Grape","Mango"]
+        for(let i = 0 ; i<theFruit.length ; i++) {
+            console.log(theFruit[i]);
+        }
+
+        for(let j=1 ; j<=5 ; j++) {
+            console.log("Number "+ j);
+        }
+
+        let numnum = 14 ;
+        let Num = [0,1,2,3,4,5,6,7,8,9,10,11,12]
+        for(let k = 1 ; k<13 ; k++) {
+            console.log(`${numnum} x ${Num[k]} = ${numnum * Num[k]}`) ;
+        }
+
+        let thePerson = {
+            name: "Kendall Roy",
+            age: 40,
+            city: "New York"
+        }
+        for(let key in thePerson) {
+            console.log(key + " : " + thePerson[key]);
+        }
+
+        let gaming = ["RDR2","RE2","Hollow Knight","Sekiro","Elden Ring","GOW"];
+        for(let gamed of gaming) {
+            console.log(`The Great games is : ${gamed}`);
+        }
+
+        let theI = 0 ;
+        while(theI <= 3) {
+            console.log(theI);
+            theI++ ;
+        }
+
+        let theJ = 1 ;
+        do {
+            console.log(theJ);
+            theJ++ ;
+        } while(theJ < 5) ;
+    </script>
+
+    <script>
+        // Object Destructuring
+        const myPerson = {
+            firstname: "Anthony",
+            lastname: "Sopranos",
+            age: "45"
+        };
+        // ดึงค่าจาก object หรีอ array ออกมา
+        let {firstname: fn, lastname: ln, age, country = "Intaly"} = myPerson ;
+        console.log(fn, ln, age, country);
+
+        const DBD_Detail = {
+            Price: "359",
+            Game_Play: "Serv-sideed",
+            Graphics: "Good",
+            Overall: "DogGame"
+        };
+        let {Price, Game_Play, Graphics, Overall } = DBD_Detail ;
+        console.log(`DBD price is : ${Price},its fucking ${Game_Play} and the graphic is ${Graphics}, but overall, ${Overall} anyway `) ;
+        
+        // Array Distructuring
+        const phones = ["iPhone","samsung","OPPO","Realme","VIVO"];
+        let [phone1, phone2, phone3, phone4, phone5] = phones ;
+        console.log(phone1, phone5);
+
+        const chars = ["Vee","Adam","Jill","Sable Ward","Micella","Dwight","Meg","Devid"];
+        const [char1,char2,char3,char4, ...char_rest] = chars ;
+        console.log(`My Favorite Character is ${char4}`) ;
+
+        const numnum2 = [10,20,30,40,50,60,70,80,90,100];
+        const [numnum2_1, numnum2_2, ...rest] = numnum2 ;
+        console.log(numnum2_1);
+        console.log(numnum2_2);
+        console.log(rest);
+
+        let myFirstName = "Kendall" ;
+        let myLastName = "Roy" ;
+        [myFirstName, myLastName] = [myLastName, myFirstName];
+        console.log(myFirstName, myLastName);
+    </script>
+
+    <script>
+        // Scope  --->>> ขอบเขต
+        
+        //Global Scope
+        let theX = 10 ;
+        var theY = 20 ;
+        const theZ = 30 ;
+        {
+            // Block Scope
+            let favName = "Sable Ward" ;
+            console.log(favName);
+        }
+
+        function localFunc() {
+            // Local Scope
+            let local = "Vee" ;
+            console.log(local) ;
+        }
+        localFunc() ;
+
+        function myFavChar() {
+            var ffn = "Sable" ; // Function Scope
+            let fln = "Ward" ; // Function Scope
+            const fa = 20 ; // Function Scope
+            console.log(`${ffn} ${fln} ${theY}`);
+        }
+        myFavChar() ;
+        
+    </script>
+
+    <script>
+        console.log(this);
+    
+        const test_this = {
+            firstname1: "Kendall",
+            lastname1: "Roy",
+            fullName() {
+                //return test_this.firstname1 + " " + test_this.lastname1 ;
+                return `${this.firstname1} ${this.lastname1}` ;
+            }
+        }
+        console.log(test_this.fullName());
+
+        function myTestThis() {
+            console.log("This inside a function",this);
+        }
+        myTestThis(); 
+    </script>
+
+    <button id="son_butt" onclick="this.style.display=alert('SON???'); ">Click to SON</button>
+
+    <script>
+        // Arrow Function
+        const add = (a, b) => a + b ;
+        console.log(`This is ex Arrow function : ${add(5,118)}`) ;
+
+        // Arrow Function without paramiters
+        const theGreet = () => "Hello, Sir." ;
+
+        const square = xx => xx * xx ;
+
+        const MYFunc = () => {
+            console.log("this is my arrow function")
+        };
+        console.log(MYFunc());
+    </script>
+
+    <script type="module" src="script.js"></script>
+
+    <h1>Data Users</h1>
+    <div id="users-Container">
+        <div>
+
+        </div>
+    </div>
+</body>
+</html>
