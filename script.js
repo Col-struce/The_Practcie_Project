@@ -111,3 +111,5 @@ function fetchWithUsers() {
 }
 
 fetchWithUsers();
+
+console.log('Test git');
